@@ -16,17 +16,23 @@
   <header class="page-header">
     <div class="page-header__container">
       <a href="index.html" class="page-header__logo">
-        <img src="assets/images/logo.svg" class="page-header__logo-img" />
+        <svg class="page-header__logo-icon" width="202" height="147">
+          <use xlink:href="assets/icons/symbols.svg#logo"></use>
+        </svg>
       </a>
 
       <nav class="page-header__nav">
-        <a href="#" class="page-header__nav-link">Мероприятия</a>
+        <a href="events.html" class="page-header__nav-link">Мероприятия</a>
         <a href="#" class="page-header__nav-link">Блог</a>
         <a href="#" class="page-header__nav-link">О нас</a>
         <a href="#" class="page-header__nav-link">Контакты</a>
       </nav>
 
-      <a href="#" class="page-header__user-btn">Войти</a>
+      <div class="page-header__right-block">
+        <a href="#" class="btn page-header__user-btn">
+          Войти
+        </a>
+      </div>
     </div>
   </header>
 
@@ -36,7 +42,7 @@
         <h1 class="main-header__title">Арт — пространство</h1>
 
         <picture class="main-header__picture">
-          <img src="assets/mages/lenni.png" class="main-header__img" />
+          <img src="assets/images/lenni.svg" class="main-header__img" />
         </picture>
 
         <p class="main-header__text">
@@ -45,6 +51,11 @@
         </p>
 
       </header>
+
+      <!-- prettier-ignore -->
+
+
+
 
       <section class="offers home__offers"></section>
       <section class="about home__about"></section>
