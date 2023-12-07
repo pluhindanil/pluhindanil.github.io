@@ -29,7 +29,7 @@ const resources = {
         "src/assets/fonts/**/*.{woff,woff2}"
     ],
     images: "src/assets/images/**/*.{png,jpg,jpeg,webp,gif,svg}",
-    svgSprite: "src/assets/svg-sprites/*.svg",
+    svgSprite: "src/assets/svg-sprite/*.svg",
 };
 
 function clean() {
