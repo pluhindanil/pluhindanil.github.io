@@ -3,6 +3,8 @@
 
 <head>
   <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
   <title>Lenni Art</title>
 
   <link rel="stylesheet" href="styles/styles.css?ver=0">
@@ -13,6 +15,7 @@
 </head>
 
 <body class="body">
+
   <header class="page-header">
     <div class="page-header__container">
       <a href="index.html" class="page-header__logo">
@@ -26,18 +29,40 @@
         <a href="#" class="page-header__nav-link">Блог</a>
         <a href="#" class="page-header__nav-link">О нас</a>
         <a href="#" class="page-header__nav-link">Контакты</a>
+
+        <div class="page-header__nav-user">
+          <a href="#" class="page-header__nav-user-link">
+            Александр С.
+          </a>
+          <a href="#" class="page-header__nav-logout">
+            <svg class="page-header__nav-logout-icon" width="24" height="24">
+              <use xlink:href="assets/icons/symbols.svg#door"></use>
+            </svg>
+          </a>
+        </div>
       </nav>
 
       <div class="page-header__right-block">
         <a href="#" class="btn page-header__user-btn">
           Войти
+          <svg class="page-header__user-icon" width="21" height="18">
+            <use xlink:href="assets/icons/symbols.svg#user"></use>
+          </svg>
         </a>
+
+        <button type="button" class="page-header__nav-toggle" id="js-navToggle"></button>
       </div>
     </div>
   </header>
+
   <main class="main">
+    <div class="breadcrumbs">
+      <a href="#" class="breadcrumbs__link">Главная</a>
+      <a href="#" class="breadcrumbs__link">Раздел</a>
+      <a href="#" class="breadcrumbs__link">Страница раздела</a>
+    </div>
     <article class="article">
-      <div class="article__container">
+      <div class="container-content">
         <h1 class="article__title title">Заголовок страницы</h1>
         <div class="article__content content">
           <h1>Заголовок h1</h1>
@@ -48,7 +73,8 @@
           <h6>Заголовок h6</h6>
 
           <p>
-            Абзац текста, содержащий <b>жирный</b> текст и <a href="https://tagree.ru/" target="_blank">ссылку</a>.
+            Абзац текста, содержащий <b>жирный</b> текст и
+            <a href="https://tagree.ru/" target="_blank">ссылку</a>.
           </p>
           <ul>
             <li>Элемент списка 1</li>
@@ -60,14 +86,13 @@
             <li>Элемент списка 2</li>
             <li>Элемент списка 3</li>
           </ol>
-          <blockquote>
-            Здесь содержится цитата
-          </blockquote>
-          <img src="assets/images/hatters.png" alt="Подпись картинки">
+          <blockquote>Здесь содержится цитата</blockquote>
+          <img src="assets/images/Sade.png" alt="Подпись картинки" />
         </div>
       </div>
     </article>
   </main>
+
   <footer class="page-footer">
     <div class="page-footer__container">
       <div class="page-footer__border"></div>
@@ -81,16 +106,15 @@
         </nav>
 
         <form class="page-footer__form">
-          <h4 class="page-footer__form-subscribe">Подпишись и будь в курсе происходящего
-          </h4>
+          <span class="page-footer__form-subscribe">Подпишись и будь в курсе происходящего</span>
           <div class="subscribe__wrapper">
             <input type="email" name="email" placeholder="Email" class="subscribe__input" required />
             <button type="submit" class="subscribe__submit">Подписаться</button>
           </div>
           <label class="subscribe__check check">
-            <input type="checkbox" class="check__input" name="agree" required />
+            <input type="checkbox" class="check__input" name="agree" checked />
             <span class="check__mark"></span>
-            <span class="check__label">
+            <span class="check__label check__label--s">
               Согласен на обработку персональных данных
             </span>
 
@@ -107,33 +131,33 @@
 
 
 
-        <!-- <div class="page-footer__social">
-            <a href="#" class="page-footer__link">
-              <svg class="page-footer__social-icon" width="58" height="58">
-                <use xlink:href="assets/icons/symbols.svg#social_inst"></use>
-              </svg>
-            </a>
-            <a href="#" class="page-footer__link">
-              <svg class="page-footer__social-icon" width="58" height="58">
-                <use xlink:href="assets/icons/symbols.svg#social_inst"></use>
-              </svg>
-            </a>
-        </div> -->
-
-
         <div class="page-footer__social">
           <a href="#" class="page-footer__link">
-            <svg class="page-footer__social-icon" width="160" height="58">
-              <use xlink:href="assets/icons/symbols.svg#social_network"></use>
+            <svg class="page-footer__social-icon" width="24" height="24">
+              <use xlink:href="assets/icons/symbols.svg#insta"></use>
+            </svg>
+          </a>
+          <a href="#" class="page-footer__link">
+            <svg class="page-footer__social-icon" width="24" height="24">
+              <use xlink:href="assets/icons/symbols.svg#vk"></use>
             </svg>
           </a>
         </div>
 
 
+        <!-- <div class="page-footer__social">
+            <a href="#" class="page-footer__link">
+              <svg class="page-footer__social-icon" width="160" height="58">
+                <use xlink:href="assets/icons/symbols.svg#social_network"></use>
+              </svg>
+            </a>
+        </div> -->
+
+
         <div class="page-footer__tagree">
           <span class="page-footer__promotion">Создание и продвижение</span>
           <svg class="page-footer__tagree-icon" width="56" height="17">
-            <use xlink:href="assets/icons/symbols.svg#tagree">
+            <use xlink:href="assets/icons/symbols.svg#tagree"></use>
 
           </svg>
         </div>
@@ -143,6 +167,7 @@
 
 
   </footer>
+
 </body>
 
 </html>

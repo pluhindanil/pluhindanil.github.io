@@ -3,6 +3,8 @@
 
 <head>
   <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
   <title>Lenni Art</title>
 
   <link rel="stylesheet" href="styles/styles.css?ver=0">
@@ -26,12 +28,28 @@
         <a href="#" class="page-header__nav-link">Блог</a>
         <a href="#" class="page-header__nav-link">О нас</a>
         <a href="#" class="page-header__nav-link">Контакты</a>
+
+        <div class="page-header__nav-user">
+          <a href="#" class="page-header__nav-user-link">
+            Александр С.
+          </a>
+          <a href="#" class="page-header__nav-logout">
+            <svg class="page-header__nav-logout-icon" width="24" height="24">
+              <use xlink:href="assets/icons/symbols.svg#door"></use>
+            </svg>
+          </a>
+        </div>
       </nav>
 
       <div class="page-header__right-block">
         <a href="#" class="btn page-header__user-btn">
           Войти
+          <svg class="page-header__user-icon" width="21" height="18">
+            <use xlink:href="assets/icons/symbols.svg#user"></use>
+          </svg>
         </a>
+
+        <button type="button" class="page-header__nav-toggle" id="js-navToggle"></button>
       </div>
     </div>
   </header>
@@ -42,16 +60,16 @@
         <h1 class="main-header__title">Арт — пространство</h1>
 
         <picture class="main-header__picture">
-          <img src="assets/images/lenni.svg" class="main-header__img" />
+          <img src="assets/images/lenni.svg" alt="Lenni" class="main-header__img" />
         </picture>
 
         <p class="main-header__text">
           для людей, горящих сердец и делом
+          <br>
           место для настоящего
         </p>
 
       </header>
-
 
       <div class="offers home__offers">
         <div class="offers__container">
@@ -62,7 +80,7 @@
           </div>
         </div>
       </div>
-      <section class="about" home__about>
+      <section class="about home__about">
         <div class="about__container">
           <h2 class="about__section-title section-title">
             О нас
@@ -79,18 +97,18 @@
           <div class="about__block2">
 
             <picture class="about__picture">
-              <img class="about__img" src="assets/images/about1.jpg" />
+              <img class="about__img" alt="about1" src="assets/images/about1.jpg" />
             </picture>
 
             <picture class="about__picture2">
-              <img class="about__img" src="assets/images/about2.jpg" />
+              <img class="about__img" alt="about2" src="assets/images/about2.jpg" />
             </picture>
             <h3 class="about__title about__title--w868 about__title--2">
               Мы предоставляем площади для вашего мероприятия
             </h3>
             <p class="about__text about__text--2">
               И оказываем помощь с организацией, если вам это нужно.
-              Наша цель: вовлечь в культурную жизнь города как можно больше людей,
+              <br>Наша цель: вовлечь в культурную жизнь города как можно больше людей,
               помочь молодым ребятам сделать первые шаги к своей мечте и рассказать всем о том, что их волнует.
             </p>
 
@@ -98,7 +116,7 @@
 
           <div class="about__block3">
             <picture class="about__picture3">
-              <img class="about__img2" src="assets/images/about3.jpg" />
+              <img class="about__img2" alt="about3" src="assets/images/about3.jpg" />
             </picture>
             <div class="about__block3-wrapper">
               <p class="about__text about__text--mb90">
@@ -114,13 +132,94 @@
                 </svg>
               </a>
             </div>
+
           </div>
 
         </div>
 
 
       </section>
-      <section class="upcoming home__upcoming"></section>
+      <section class="upcoming home__upcoming home__upcoming">
+
+
+        <div class="tringle tringle-top">
+          <div id="tringl-right-top"></div>
+          <div id="tringl-left-top"></div>
+        </div>
+        <div class="bgc">
+          <div class="upcoming__container">
+
+            <h2 class="listing__title section-title upcoming__title">Мероприятия</h2>
+
+            <section class="listing upcoming__listing">
+
+              <!-- prettier-ignore -->
+              <article class="event-card  listing__event-card--i">
+                <a href="#" class="event-card__link">
+                  <picture class="event-card__picture">
+                    <img src="assets/images/Nirvana.jpg" alt="nirvana" class="event-card__img" />
+                  </picture>
+                  <h4 class="event-card__title">Собираемся и слушаем альбом Nirvana.</h4>
+                  <p class="event-card__description">Это третий альбом группы, выпущенный после смерти Курта Кобейна и первый, содержащий студийный материал.</p>
+                  <time datetime="2022-12-07T18:00" class="event-card__time">07.12.2022 | начало 18.00</time>
+                </a>
+              </article>
+              <article class="event-card  listing__event-card--i">
+                <a href="#" class="event-card__link">
+                  <picture class="event-card__picture">
+                    <img src="assets/images/stuff.png" alt="stuff" class="event-card__img" />
+                  </picture>
+                  <h4 class="event-card__title">Есть тема, нужно обсудить с HowStuffWorks</h4>
+                  <p class="event-card__description">Один из самых популярных подкастов в мире. В нём авторы объясняют, как устроены разные вещи.</p>
+                  <time datetime="2022-12-14T18:30" class="event-card__time">14.12.2022 | начало 18.30</time>
+                </a>
+              </article>
+              <article class="event-card  listing__event-card--i">
+                <a href="#" class="event-card__link">
+                  <picture class="event-card__picture">
+                    <img src="assets/images/Sade.png" alt="sade" class="event-card__img" />
+                  </picture>
+                  <h4 class="event-card__title">Вечер | The Best of Sade</h4>
+                  <p class="event-card__description">Музыка группы имеет эклектичный характер, сочетая в себе элементы музыки соул, джаза, ритм-блюза и фанка.</p>
+                  <time datetime="2022-12-16T20:00" class="event-card__time">16.12.2022 | начало 20.00</time>
+                </a>
+              </article>
+              <!-- </div> -->
+
+
+
+            </section>
+
+            <div class="upcoming__slider">
+              <a href="#" class="link">
+                <svg class="link__icon link__reverse upcoming__arrow" width="91" height="60">
+                  <use xlink:href="assets/icons/symbols.svg#link"></use>
+                </svg>
+              </a>
+
+              <svg class="upcoming__center" width="99" height="2">
+                <use xlink:href="assets/icons/symbols.svg#center"></use>
+
+              </svg>
+
+              <a href="#" class="link">
+                <svg class="link__icon upcoming__arrow" width="91" height="60">
+                  <use xlink:href="assets/icons/symbols.svg#link"></use>
+                </svg>
+              </a>
+
+            </div>
+
+            <a href="#" class="upcoming__link link">Смотреть все</a>
+          </div>
+
+        </div>
+
+        <div class="tringle tringle-button">
+          <div id="tringl-right-button"></div>
+          <div id="tringl-left-button"></div>
+        </div>
+      </section>
       <section class="listing home__listing">
         <h2 class="listing__title section-title">Блог</h2>
 
@@ -129,12 +228,17 @@
           <article class="article-card listing__article-card">
             <a href="#" class="article-card__link">
               <picture class="article-card__picture">
-                <img src="assets/images/fotosession.jpg" alt="theatre photosession" class="article-card__img" />
+                <source media="(max-width: 450px)" type="image/webp" srcset="assets/images/blog/theatre.webp" />
+                <source media="(max-width: 450px)" srcset="assets/images/blog/theatre.jpg" />
+                <source media="(max-width: 1169px)" type="image/webp" srcset="assets/images/blog/theatre_tablet.webp" />
+                <source media="(max-width: 1169px)" srcset="assets/images/blog/theatre_tablet.jpg" />
+                <source type="image/webp" srcset="assets/images/blog/theatre.webp" />
+                <img src="assets/images/blog/theatre.jpg" alt="Theatre Photosession" class="article-card__img" />
               </picture>
             </a>
 
             <div class="article-card__info">
-              <time datetime="2022-11-26T00:00" class="article-card__time">26.11.2022</time>
+              <time datetime="2021-11-26T00:00" class="article-card__time">26.11.2021</time>
 
               <a href="#" class="article-card__title-link">
                 <h4 class="article-card__title">Фотосессия в стенах Театра драмы</h4>
@@ -146,13 +250,18 @@
                 </div>
               </a>
 
-              <p class="article-card__description">Организовывая фотосессию для локального бренда одежды мы смогли воплотить все пожелания заказчика и у нас получилась отличная работа. Смотрите как это было.</p>
+              <p class="article-card__description">Организовывая фотосессию для локального бренда одежды мы смогли воплотить все пожелания заказчика и у нас получилась отличная работа. Смотрите как это было </p>
             </div>
           </article>
           <article class="article-card listing__article-card">
             <a href="#" class="article-card__link">
               <picture class="article-card__picture">
-                <img src="assets/images/vr.jpg" alt="vr" class="article-card__img" />
+                <source media="(max-width: 450px)" type="image/webp" srcset="assets/images/blog/vr.webp" />
+                <source media="(max-width: 450px)" srcset="assets/images/blog/vr.jpg" />
+                <source media="(max-width: 1169px)" type="image/webp" srcset="assets/images/blog/vr_tablet.webp" />
+                <source media="(max-width: 1169px)" srcset="assets/images/blog/vr_tablet.jpg" />
+                <source type="image/webp" srcset="assets/images/blog/vr.webp" />
+                <img src="assets/images/blog/vr.jpg" alt="vr" class="article-card__img" />
               </picture>
             </a>
 
@@ -175,7 +284,12 @@
           <article class="article-card listing__article-card">
             <a href="#" class="article-card__link">
               <picture class="article-card__picture">
-                <img src="assets/images/rock.jpg" alt="rocking radio" class="article-card__img" />
+                <source media="(max-width: 450px)" type="image/webp" srcset="assets/images/blog/radio.webp" />
+                <source media="(max-width: 450px)" srcset="assets/images/blog/radio.jpg" />
+                <source media="(max-width: 1169px)" type="image/webp" srcset="assets/images/blog/radio_tablet.webp" />
+                <source media="(max-width: 1169px)" srcset="assets/images/blog/radio_tablet.jpg" />
+                <source type="image/webp" srcset="assets/images/blog/radio.webp" />
+                <img src="assets/images/blog/radio.jpg" alt="rocking radio" class="article-card__img" />
               </picture>
             </a>
 
@@ -195,12 +309,14 @@
               <p class="article-card__description">15 электрогенераторов, километры проводов и пару тонн света. Все это для того, чтобы организовать лучшую вечеринку года для ребят из Новосибирска.</p>
             </div>
           </article>
+
         </div>
 
         <a href="#" class="listing__link link">Смотреть все</a>
       </section>
 
-      <section class="contacts home__contact home__contacts">
+
+      <section class="contacts home__contacts home__contacts">
         <div class="contacts__container">
           <h2 class="contacts__title section-title">
             Контакты
@@ -211,7 +327,7 @@
               <div class="contacts-item">
                 <div class="contacts-item__img">
                   <svg class="contacts-item__icon" width="24" height="24">
-                    <use xlink:href="assets/icons/symbols.svg#location">
+                    <use xlink:href="assets/icons/symbols.svg#location"></use>
                   </svg>
                 </div>
                 <div class="contacts-item__content">
@@ -224,12 +340,12 @@
               <div class="contacts-item">
                 <div class="contacts-item__img">
                   <svg class="contacts-item__icon" width="24" height="24">
-                    <use xlink:href="assets/icons/symbols.svg#home">
+                    <use xlink:href="assets/icons/symbols.svg#home"></use>
                   </svg>
                 </div>
                 <div class="contacts-item__content">
                   <h4 class="contacts-item__title">Отдел аренды</h4>
-                  <a href="tel: 74993500740" class="contacts-item__info">+7 499 350 0730</a>
+                  <a href="tel:74993500740" class="contacts-item__info">+7 499 350 0730</a>
                   <a href="mailto:hi@tagree.ru" class="contacts-item__info">hi@tagree.ru</a>
                 </div>
               </div>
@@ -237,25 +353,23 @@
               <div class="contacts-item">
                 <div class="contacts-item__img">
                   <svg class="contacts-item__icon" width="24" height="24">
-                    <use xlink:href="assets/icons/symbols.svg#star">
+                    <use xlink:href="assets/icons/symbols.svg#star"></use>
                   </svg>
                 </div>
                 <div class="contacts-item__content">
                   <h4 class="contacts-item__title">Отдел мероприятий</h4>
-                  <a href="tel: 74993500740" class="contacts-item__info">+7 499 350 0730</a>
+                  <a href="tel:74993500740" class="contacts-item__info">+7 499 350 0730</a>
                   <a href="mailto:hi@tagree.ru" class="contacts-item__info">hi@tagree.ru</a>
                 </div>
               </div>
 
             </div>
-            <div class="contacts__map">
-              <img src="assets/images/map.jpg" alt="map">
+            <div class="contacts__picture">
+              <img src="assets/images/map.jpg" class="contacts__img" alt="map" />
             </div>
           </div>
         </div>
       </section>
-
-
 
       <div class="doit home__doit">
         <div class="doit @@class"></div>
@@ -280,16 +394,15 @@
         </nav>
 
         <form class="page-footer__form">
-          <h4 class="page-footer__form-subscribe">Подпишись и будь в курсе происходящего
-          </h4>
+          <span class="page-footer__form-subscribe">Подпишись и будь в курсе происходящего</span>
           <div class="subscribe__wrapper">
             <input type="email" name="email" placeholder="Email" class="subscribe__input" required />
             <button type="submit" class="subscribe__submit">Подписаться</button>
           </div>
           <label class="subscribe__check check">
-            <input type="checkbox" class="check__input" name="agree" required />
+            <input type="checkbox" class="check__input" name="agree" checked />
             <span class="check__mark"></span>
-            <span class="check__label">
+            <span class="check__label check__label--s">
               Согласен на обработку персональных данных
             </span>
 
@@ -306,33 +419,33 @@
 
 
 
-        <!-- <div class="page-footer__social">
-            <a href="#" class="page-footer__link">
-              <svg class="page-footer__social-icon" width="58" height="58">
-                <use xlink:href="assets/icons/symbols.svg#social_inst"></use>
-              </svg>
-            </a>
-            <a href="#" class="page-footer__link">
-              <svg class="page-footer__social-icon" width="58" height="58">
-                <use xlink:href="assets/icons/symbols.svg#social_inst"></use>
-              </svg>
-            </a>
-        </div> -->
-
-
         <div class="page-footer__social">
           <a href="#" class="page-footer__link">
-            <svg class="page-footer__social-icon" width="160" height="58">
-              <use xlink:href="assets/icons/symbols.svg#social_network"></use>
+            <svg class="page-footer__social-icon" width="24" height="24">
+              <use xlink:href="assets/icons/symbols.svg#insta"></use>
+            </svg>
+          </a>
+          <a href="#" class="page-footer__link">
+            <svg class="page-footer__social-icon" width="24" height="24">
+              <use xlink:href="assets/icons/symbols.svg#vk"></use>
             </svg>
           </a>
         </div>
 
 
+        <!-- <div class="page-footer__social">
+            <a href="#" class="page-footer__link">
+              <svg class="page-footer__social-icon" width="160" height="58">
+                <use xlink:href="assets/icons/symbols.svg#social_network"></use>
+              </svg>
+            </a>
+        </div> -->
+
+
         <div class="page-footer__tagree">
           <span class="page-footer__promotion">Создание и продвижение</span>
           <svg class="page-footer__tagree-icon" width="56" height="17">
-            <use xlink:href="assets/icons/symbols.svg#tagree">
+            <use xlink:href="assets/icons/symbols.svg#tagree"></use>
 
           </svg>
         </div>
@@ -391,7 +504,7 @@
               <div class="form__field field">
                 <h6 class="field__title">Планируемое количество посетителей:</h6>
 
-                <select class="field__select" placeholder="Выберите планируемое число посетителей" name="amount">
+                <select name="amount" class="field__select ">
                   <option value="20">до 20 человек</option>
                   <option value="100">от 20 до 100 человек</option>
                   <option value="500">от 100 до 500 человек</option>
@@ -439,7 +552,8 @@
 
           <label class="field form__field">
             <span class="field__title">Есть пожелания? Напишите&nbsp;нам:</span>
-            <textarea class="field__textarea" type="text" name="Пожелания"></textarea>
+            <textarea class="field__textarea" name="wish">
+                </textarea>
           </label>
 
           <div class="form__check-list">
@@ -467,9 +581,7 @@
     </div>
   </div>
 
-
-
-
+  <script src="scripts/main.min.js"></script>
 
 </body>
 
